@@ -1,0 +1,42 @@
+﻿<Page x:Class="UI.Windows.SignUpPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:UI.Windows"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="SignUpPage">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <StackPanel Margin="50">
+            <TextBlock Text="Welcome to MyApp" FontSize="32" FontWeight="Bold" Margin="0 0 0 20" />
+            <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                <TextBlock Text="Username:" FontSize="16" FontWeight="Bold" Width="100" />
+                <TextBox x:Name="UsernameBox" FontSize="16" Width="200" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                <TextBlock Text="Emile:" FontSize="16" FontWeight="Bold" Width="100" />
+                <TextBox x:Name="EmailBox" FontSize="16" Width="200" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                <TextBlock Text="Password:" FontSize="16" FontWeight="Bold" Width="100" />
+                <PasswordBox x:Name="PasswordBox" FontSize="16" Width="200" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                <TextBlock Text="Confirm:" FontSize="16" FontWeight="Bold" Width="100" />
+                <PasswordBox x:Name="SecPasswordBox" FontSize="16" Width="200" />
+            </StackPanel>
+            <Button x:Name="LoginButton" Content="Log in" FontSize="16" FontWeight="Bold" Click="Login_Click" Margin="0 20 0 0" />
+            <StackPanel Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+                <TextBlock Text="Already have account " FontSize="14" />
+                <TextBlock Text="Log in" FontSize="14" TextDecorations="Underline" Foreground="Blue" Margin="0,0,0,0" MouseDown="LogIn_MouseDown"/>
+            </StackPanel>
+        </StackPanel>
+        <TextBlock Grid.Row="1" Text="© 2023 MyApp. All rights reserved." FontSize="12" HorizontalAlignment="Center" Margin="0 10" />
+    </Grid>
+</Page>
