@@ -14,7 +14,7 @@ namespace DataLayer.Database
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string solutionFolder = "D:\\uni\\sem6\\PS";
+            string solutionFolder = AppDomain.CurrentDomain.BaseDirectory;
             string databaseFile = "Welcome.db";
             string databasePath = Path.Combine(solutionFolder, databaseFile);
             optionsBuilder.UseSqlite($"Data Source={databasePath}");
@@ -72,5 +72,7 @@ namespace DataLayer.Database
 
         public DbSet<DatabaseUser> Users { get; set; }
         public DbSet<DatabaseLog> Log { get; set; }
+
+        public DbSet<DatabaseGrade> Grades { get; set; }
     }
 }

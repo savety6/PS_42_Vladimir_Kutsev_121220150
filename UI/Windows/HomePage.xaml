@@ -12,7 +12,7 @@
     <Grid>
         <Button Content="Go Back" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" BorderThickness="0" Command="NavigationCommands.BrowseBack"/>
         <TextBlock Text="Welcome to the home page!" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="50" x:Name="Greetings" Margin="0,44,0,0"/>
-        <Components:StudentsList HorizontalAlignment="Center" VerticalAlignment="Top" Height="200" Width="auto" Margin="0,200,0,0"/>
+        <Components:StudentsList x:Name="studentsListControl" HorizontalAlignment="Center" VerticalAlignment="Top"  Height="200" Width="auto" Margin="0,200,0,0"/>
         <Button Content="ShowLogs" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="40" Width="60" Click="ShowLogs_Click" Margin="0 0 10 10" x:Name="logsBtn"/>
     </Grid>
 </Page>

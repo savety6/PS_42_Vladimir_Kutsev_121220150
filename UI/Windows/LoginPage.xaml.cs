@@ -52,9 +52,9 @@ namespace UI.Windows
                 var ret = from user in context.Users
                           where user.Name == UsernameBox.Text && user.Password == PasswordBox.Password
                           select user;
-                if (ret != null)
+                if (ret != null && ret.Any())
                 {
-                    NavigationService.Navigate(new HomePage(ret.FirstOrDefault()));
+                    NavigationService.Navigate(new HomePage(ret.First()));
                 }
                 else
                 {

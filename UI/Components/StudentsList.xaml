@@ -10,7 +10,7 @@
         <local2:PasswordConverter x:Key="passwordConverter" />
     </UserControl.Resources>
     <Grid>
-        <DataGrid ItemsSource="{Binding}" Name="student" AutoGenerateColumns="False">
+        <DataGrid ItemsSource="{Binding}" Name="student" AutoGenerateColumns="False" SelectionChanged="DataGrid_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="#" IsReadOnly="True" Binding="{Binding Id}"/>
                 <DataGridTextColumn Header="Names" IsReadOnly="True" Binding="{Binding Name}"/>
